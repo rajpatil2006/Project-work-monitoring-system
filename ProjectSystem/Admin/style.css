@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+
+
+.overview {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+#sidebar {
+    width: max-content;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 20px;
+
+}
+
+#menu {
+    flex-grow: 1;
+    width: max-content;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+#menu ul {
+    padding-left: 0;
+}
+
+#menu li {
+    position: relative;
+}
+
+#menu a {
+    display: block;
+    color: #fff;
+
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #555;
+    text-align: left;
+}
+
+#menu a:hover {
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.nested-list {
+
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #2c3e50;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: max-content;
+    list-style-type: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#menu li:hover .nested-list {
+    display: block;
+}
+
+
+#menu .active {
+    background-color: #555;
+}
